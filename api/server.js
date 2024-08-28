@@ -1,3 +1,52 @@
+const express = require("express");
+
+const server = express();
+
+server.get("/", (_request, response) => {
+  response.status(200).send("Olá mundo");
+});
+
+server.get("/ping", (_request, response) => {
+  response.status(200).send("pong");
+});
+
+server.use((_request, response) => {
+  response.status(404).send("Rota não encontrada");
+});
+
+server.listen(3000, () => console.log("Server is running... 🔥"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 const http = require('http');
 
 // Função de callback para lidar com as requisições
@@ -20,3 +69,4 @@ const PORT = 3000;
 server.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
+*/
